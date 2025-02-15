@@ -27,6 +27,47 @@ To run the project locally:
    ```
 
 3. Open `index.html` in your browser to start drawing.
+
+## Troubleshooting
+
+### Cross-Origin Request Issue
+
+If you encounter the error `"Cross origin requests are only supported for HTTP."` while running the app locally:
+
+- This error occurs because some browsers block `file://` requests due to cross-origin policies.
+- **Solution**: You need to serve the project through a local server. You can use any lightweight server like `http-server` in Node.js, or Python's built-in HTTP server.
+
+#### Using Node.js
+
+1. Install the `http-server` package:
+
+   ```bash
+   npm install -g http-server
+   ```
+
+2. Run the server in the project directory:
+
+   ```bash
+   http-server
+   ```
+
+3. Open `http://localhost:8080` in your browser.
+
+#### Using Python
+
+For Python 3:
+
+   ```bash
+   python3 -m http.server
+   ```
+
+For Python 2:
+
+   ```bash
+   python -m SimpleHTTPServer
+   ```
+
+Then, open `http://localhost:8000` in your browser.   
    
 
 ## Dependencies
